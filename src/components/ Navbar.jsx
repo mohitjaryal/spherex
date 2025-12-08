@@ -16,15 +16,14 @@ export default function Navbar() {
       {/* Right - Navigation Links */}
       <div className="hidden md:flex items-center space-x-8 text-white font-medium">
         <a href="#hero" className="hover:text-indigo-400 transition-colors duration-300">
-          Hero
-        </a>
-        <a href="#about" className="hover:text-indigo-400 transition-colors duration-300">
           About
         </a>
         <a href="#founders" className="hover:text-indigo-400 transition-colors duration-300">
           Founders
         </a>
-  
+        <a href="#features" className="hover:text-indigo-400 transition-colors duration-300">
+          Features
+        </a>
       </div>
     </nav>
   );
