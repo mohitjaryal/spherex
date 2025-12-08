@@ -13,15 +13,19 @@ export default function Navbar() {
         />
       </div>
 
-      {/* Right - LinkedIn Button */}
-      <a
-        href="https://www.linkedin.com/company/spherexcommunity/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sm md:text-base bg-indigo-500 hover:bg-indigo-600 hover:shadow-indigo-500/30 text-white px-5 py-2 rounded-xl font-medium transition-all duration-300"
-      >
-        Connect on LinkedIn
-      </a>
+      {/* Right - Navigation Links */}
+      <div className="hidden md:flex items-center space-x-8 text-white font-medium">
+        <a href="#hero" className="hover:text-indigo-400 transition-colors duration-300">
+          Hero
+        </a>
+        <a href="#about" className="hover:text-indigo-400 transition-colors duration-300">
+          About
+        </a>
+        <a href="#founders" className="hover:text-indigo-400 transition-colors duration-300">
+          Founders
+        </a>
+  
+      </div>
     </nav>
   );
 }
