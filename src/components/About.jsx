@@ -68,7 +68,7 @@ export default function About() {
               global network of changemakers.
             </p>
             <a
-              href="https://www.linkedin.com/in/COFOUNDER_LINK/"
+              href="https://www.linkedin.com/in/shivam-yadav2005/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-indigo-400 hover:text-indigo-300 text-sm font-medium"
