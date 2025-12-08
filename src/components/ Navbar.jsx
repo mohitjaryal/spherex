@@ -24,6 +24,9 @@ export default function Navbar() {
         <a href="#features" className="hover:text-indigo-400 transition-colors duration-300">
           Features
         </a>
+        <a href="#contact" className="hover:text-indigo-400 transition-colors duration-300">
+          Contact
+        </a>
       </div>
     </nav>
   );
