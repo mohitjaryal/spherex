@@ -1,14 +1,14 @@
 import React from "react";
-import logo from "../images/sphereXcommunity.jpeg"; // 👈 Correct relative path (not src/images)
+import logo from "../images/sphereXcommunity.jpeg"; // ✅ correct relative path
 
 export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-6 md:px-12 py-4 bg-gray-900/90 backdrop-blur-md sticky top-0 z-50 shadow-lg border-b border-gray-800">
-      {/* Left - Logo */}
+      {/* Left - Full Logo */}
       <img
         src={logo}
         alt="SphereX Community Logo"
-        className="w-12 h-12 rounded-full border border-indigo-500 hover:scale-105 transition-transform duration-300"
+        className="w-36 h-auto object-contain hover:scale-105 transition-transform duration-300"
       />
 
       {/* Right - LinkedIn Button */}
