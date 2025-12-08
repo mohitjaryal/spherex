@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/sphereXcommunity.png"; // ✅ correct relative path
+import logo from "../images/sphereXcommunity.jpeg"; // ✅ correct relative path
 
 export default function Navbar() {
   return (
