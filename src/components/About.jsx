@@ -60,7 +60,7 @@ export default function About() {
             <h5 className="text-xl font-semibold">
               Mohit Jaryal <span className="text-gray-400 text-sm">(18 yrs)</span>
             </h5>
-            <p className="text-indigo-300 text-sm mb-3">Founder & CEO</p>
+            <p className="text-indigo-300 text-sm mb-3">Founder & CEO (Community Initiative)</p>
             <p className="text-gray-400 text-sm">
               Visionary leader passionate about building communities and
               fostering innovation across the tech ecosystem.
@@ -89,7 +89,7 @@ export default function About() {
             <h5 className="text-xl font-semibold">
               Shivam Yadav <span className="text-gray-400 text-sm">(20 yrs)</span>
             </h5>
-            <p className="text-indigo-300 text-sm mb-3">Co-Founder & COO</p>
+            <p className="text-indigo-300 text-sm mb-3">Co-Founder & COO (Community Initiative)</p>
             <p className="text-gray-400 text-sm">
               Dedicated to empowering youth through technology and building a
               global network of changemakers.
