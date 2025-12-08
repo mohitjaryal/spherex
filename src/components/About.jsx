@@ -1,6 +1,6 @@
 import React from "react";
 import founderImg from "../images/founder.jpeg"; 
-// import cofounderImg from "../images/cofounder.jpeg"; // 👈 (optional) if co-founder image also in src/images
+import cofounderImg from "../images/cofounder.jpeg"; 
 
 export default function About() {
   return (
@@ -56,11 +56,11 @@ export default function About() {
 
           {/* Co-Founder */}
           <div className="bg-gray-900 rounded-2xl shadow-xl hover:shadow-indigo-600/30 transition-all duration-300 p-6 w-72">
-            {/* <img
+            <img
               src={cofounderImg}
               alt="Co-Founder - Shivam Yadav"
               className="w-28 h-28 object-cover rounded-full mx-auto mb-4 border-4 border-indigo-500 shadow-lg"
-            /> */}
+            />
             <h5 className="text-xl font-semibold">Shivam Yadav</h5>
             <p className="text-indigo-300 text-sm mb-3">Co-Founder</p>
             <p className="text-gray-400 text-sm">
