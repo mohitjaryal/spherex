@@ -3,13 +3,15 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center text-center min-h-[90vh] px-6 py-20 bg-gradient-to-b from-black via-gray-900 to-indigo-950 overflow-hidden">
-      {/* Background Glow Effects */}
+      {/* Subtle Animated Background Circles */}
       <div className="absolute inset-0">
-        <div className="absolute top-32 left-1/4 w-72 h-72 bg-indigo-600/20 blur-3xl rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/6 w-60 h-60 bg-indigo-600/10 rounded-full animate-float-slow"></div>
+        <div className="absolute bottom-1/3 right-1/5 w-72 h-72 bg-purple-500/10 rounded-full animate-float-slow delay-2000"></div>
+        <div className="absolute top-1/3 right-1/4 w-40 h-40 bg-pink-500/20 rounded-full animate-float-slow-reverse delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-indigo-400/10 rounded-full animate-float-slow delay-1500"></div>
       </div>
 
-      {/* Content */}
+      {/* Hero Content */}
       <div className="relative z-10 max-w-3xl">
         <h2 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
           Empowering{" "}
@@ -34,6 +36,29 @@ export default function Hero() {
           Join the Community
         </a>
       </div>
+
+      {/* Tailwind Custom Animations */}
+      <style>
+        {`
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); opacity: 0.4; }
+            50% { transform: translateY(-20px); opacity: 0.6; }
+          }
+          @keyframes float-slow-reverse {
+            0%, 100% { transform: translateY(0px); opacity: 0.4; }
+            50% { transform: translateY(20px); opacity: 0.6; }
+          }
+          .animate-float-slow {
+            animation: float-slow 12s ease-in-out infinite;
+          }
+          .animate-float-slow-reverse {
+            animation: float-slow-reverse 14s ease-in-out infinite;
+          }
+          .delay-1000 { animation-delay: 1s; }
+          .delay-1500 { animation-delay: 1.5s; }
+          .delay-2000 { animation-delay: 2s; }
+        `}
+      </style>
     </section>
   );
 }
