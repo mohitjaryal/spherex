@@ -13,8 +13,8 @@ export default function App() {
       <Hero />
       <About />
       <Features />
-      <Footer />
       <Contact />
+      <Footer />
     </div>
   );
 }
