@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Linkedin, Globe } from "lucide-react";
 import founderImg from "../images/founder.jpeg"; 
 import cofounderImg from "../images/cofounder.jpeg"; 
 
@@ -46,7 +47,7 @@ export default function About() {
         </h4>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-          {/* Founder 1 */}
+          {/* Founder */}
           <div
             className={`bg-gray-900 rounded-2xl shadow-xl p-6 w-72 transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-600/50 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -61,18 +62,28 @@ export default function About() {
               Mohit Jaryal <span className="text-gray-400 text-sm">(18 yrs)</span>
             </h5>
             <p className="text-indigo-300 text-sm mb-3">Founder & CEO (Community Initiative)</p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm mb-4">
               Visionary leader passionate about building communities and
               fostering innovation across the tech ecosystem.
             </p>
-            <a
-              href="https://www.linkedin.com/in/mohitjaryal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block text-indigo-400 hover:text-indigo-300 text-sm font-medium"
-            >
-              View LinkedIn →
-            </a>
+            <div className="flex justify-center space-x-4 mt-2">
+              <a
+                href="https://www.linkedin.com/in/mohitjaryal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="https://mohitjaryal.online"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+              >
+                <Globe size={24} />
+              </a>
+            </div>
           </div>
 
           {/* Co-Founder */}
@@ -90,18 +101,20 @@ export default function About() {
               Shivam Yadav <span className="text-gray-400 text-sm">(20 yrs)</span>
             </h5>
             <p className="text-indigo-300 text-sm mb-3">Co-Founder & COO (Community Initiative)</p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm mb-4">
               Dedicated to empowering youth through technology and building a
               global network of changemakers.
             </p>
-            <a
-              href="https://www.linkedin.com/in/shivam-yadav2005/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block text-indigo-400 hover:text-indigo-300 text-sm font-medium"
-            >
-              View LinkedIn →
-            </a>
+            <div className="flex justify-center space-x-4 mt-2">
+              <a
+                href="https://www.linkedin.com/in/shivam-yadav2005/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+              >
+                <Linkedin size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
