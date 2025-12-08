@@ -15,7 +15,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="px-8 py-20 bg-gray-900">
+    <section id="features" className="px-8 py-20 bg-gray-900">
       <h3 className="text-3xl font-bold text-center mb-12 text-indigo-400">
         What We Offer
       </h3>
@@ -23,10 +23,10 @@ export default function Features() {
         {features.map((item, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
             className="bg-gray-800 rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex justify-center mb-4">{item.icon}</div>
