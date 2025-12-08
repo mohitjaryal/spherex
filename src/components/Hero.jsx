@@ -1,58 +1,96 @@
 import React from "react";
+import founderImg from "../images/founder.jpeg";
+import cofounderImg from "../images/cofounder.jpeg";
+import { motion } from "framer-motion";
 
-export default function Hero() {
+export default function About() {
+  const founders = [
+    {
+      img: founderImg,
+      name: "Mohit Jaryal",
+      role: "Founder & CEO",
+      age: 18,
+      desc: "Visionary leader passionate about building communities and fostering innovation across the tech ecosystem.",
+      linkedin: "https://www.linkedin.com/in/mohitjaryal",
+    },
+    {
+      img: cofounderImg,
+      name: "Shivam Yadav",
+      role: "Co-Founder & COO",
+      age: 20,
+      desc: "Dedicated to empowering youth through technology and building a global network of changemakers.",
+      linkedin: "https://www.linkedin.com/in/shivam-yadav2005/",
+    },
+  ];
+
   return (
-    <section className="relative flex flex-col items-center justify-center text-center min-h-[90vh] px-6 py-20 bg-gradient-to-b from-black via-gray-900 to-indigo-950 overflow-hidden">
-      {/* Subtle Animated Background Circles */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 w-60 h-60 bg-indigo-600/10 rounded-full animate-float-slow"></div>
-        <div className="absolute bottom-1/3 right-1/5 w-72 h-72 bg-purple-500/10 rounded-full animate-float-slow delay-2000"></div>
-        <div className="absolute top-1/3 right-1/4 w-40 h-40 bg-pink-500/20 rounded-full animate-float-slow-reverse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-indigo-400/10 rounded-full animate-float-slow delay-1500"></div>
+    <section id="about" className="px-6 md:px-16 py-20 bg-gray-950 text-center text-white relative overflow-hidden">
+      {/* Floating background circles for founders */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 left-1/5 w-40 h-40 bg-indigo-500/10 rounded-full animate-float-smooth"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-52 h-52 bg-purple-500/10 rounded-full animate-float-smooth delay-2000"></div>
       </div>
 
-      {/* Hero Content */}
-      <div className="relative z-10 max-w-3xl">
-        <h2 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
-          Empowering{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-            Tech Innovators
-          </span>
-        </h2>
+      {/* About Section */}
+      <h3 className="text-4xl font-extrabold mb-6 text-indigo-400">About SphereX Community</h3>
+      <p className="max-w-3xl mx-auto text-gray-300 leading-relaxed text-lg mb-16">
+        <span className="text-indigo-300 font-semibold">SphereX Community</span> is a tech-driven initiative connecting innovators, enthusiasts, and changemakers. Founded by two passionate co-founders, our mission is to foster collaboration, learning, and innovation across the tech ecosystem.
+        <br />
+        <br />
+        Though currently an unregistered venture, we are driven by a shared vision to empower individuals, encourage knowledge sharing, and create opportunities for our members to grow and make an impact in the global tech community.
+      </p>
 
-        <p className="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed">
-          SphereX Community connects innovators, enthusiasts, and changemakers
-          through collaboration, learning, and growth.  
-          <br className="hidden md:block" />
-          Join us in shaping the future of technology.
-        </p>
+      {/* Founders Section */}
+      <div id="founders" className="mt-16">
+        <h4 className="text-3xl font-bold mb-10 text-indigo-400">Meet the Founders</h4>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+          {founders.map((f, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-gray-900 rounded-2xl shadow-xl p-6 w-72 transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-600/50 relative overflow-hidden"
+            >
+              {/* Floating circle behind founder image */}
+              <div className="absolute -top-8 -left-8 w-32 h-32 bg-indigo-400/20 rounded-full animate-float-smooth delay-1500 -z-10"></div>
 
-        <a
-          href="https://www.linkedin.com/company/spherexcommunity/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-indigo-500/40 transition-all duration-300"
-        >
-          Join the Community
-        </a>
+              <img
+                src={f.img}
+                alt={f.name}
+                className="w-28 h-28 object-cover rounded-full mx-auto mb-4 border-4 border-indigo-500 shadow-lg"
+              />
+              <h5 className="text-xl font-semibold">
+                {f.name} <span className="text-gray-400 text-sm">({f.age} yrs)</span>
+              </h5>
+              <p className="text-indigo-300 text-sm mb-3">{f.role}</p>
+              <p className="text-gray-400 text-sm">{f.desc}</p>
+              <a
+                href={f.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-indigo-400 hover:text-indigo-300 text-sm font-medium"
+              >
+                View LinkedIn →
+              </a>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       {/* Tailwind Custom Animations */}
       <style>
         {`
-          @keyframes float-slow {
-            0%, 100% { transform: translateY(0px); opacity: 0.4; }
-            50% { transform: translateY(-20px); opacity: 0.6; }
+          @keyframes float-smooth {
+            0% { transform: translate(0,0) rotate(0deg) scale(1); opacity: 0.4; }
+            25% { transform: translate(10px,-15px) rotate(15deg) scale(1.05); opacity: 0.6; }
+            50% { transform: translate(0,-20px) rotate(0deg) scale(1); opacity: 0.5; }
+            75% { transform: translate(-10px,-15px) rotate(-15deg) scale(0.95); opacity: 0.6; }
+            100% { transform: translate(0,0) rotate(0deg) scale(1); opacity: 0.4; }
           }
-          @keyframes float-slow-reverse {
-            0%, 100% { transform: translateY(0px); opacity: 0.4; }
-            50% { transform: translateY(20px); opacity: 0.6; }
-          }
-          .animate-float-slow {
-            animation: float-slow 12s ease-in-out infinite;
-          }
-          .animate-float-slow-reverse {
-            animation: float-slow-reverse 14s ease-in-out infinite;
+          .animate-float-smooth {
+            animation: float-smooth 20s ease-in-out infinite;
           }
           .delay-1000 { animation-delay: 1s; }
           .delay-1500 { animation-delay: 1.5s; }
