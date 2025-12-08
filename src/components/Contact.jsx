@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -18,39 +18,57 @@ export default function Contact() {
         Get In Touch
       </h3>
       <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
-        Have questions, suggestions, or want to collaborate? Reach out directly to our founder:
+        Have questions, suggestions, or want to collaborate? Connect with our team:
       </p>
 
-      {/* Contact Card */}
-      <div className="max-w-md mx-auto bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
-        <Mail size={36} className="text-indigo-400 mb-2" />
-        <h4 className="text-xl font-semibold">Mohit Jaryal</h4>
-        <p className="text-gray-400 text-sm">Founder & CEO, SphereX Community</p>
-        <a
-          href="mailto:reach.mohitjaryal@gmail.com"
-          className="text-indigo-400 hover:text-indigo-300 underline text-sm transition-colors duration-300"
-        >
-          reach.mohitjaryal@gmail.com
-        </a>
+      {/* Contact Cards */}
+      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        {/* Founder */}
+        <div className="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
+          <h4 className="text-xl font-semibold">Mohit Jaryal</h4>
+          <p className="text-gray-400 text-sm">Founder & CEO, SphereX Community</p>
+          <div className="flex space-x-6 mt-2">
+            <a
+              href="mailto:reach.mohitjaryal@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+            >
+              <Mail size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mohitjaryal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+            >
+              <Linkedin size={28} />
+            </a>
+          </div>
+        </div>
 
-        {/* Optional Social Links */}
-        <div className="flex space-x-6 mt-4">
-          <a
-            href="https://www.linkedin.com/in/mohitjaryal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
-          >
-            <Linkedin size={24} />
-          </a>
-          <a
-            href="https://github.com/mohitjaryal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
-          >
-            <Github size={24} />
-          </a>
+        {/* Co-Founder */}
+        <div className="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
+          <h4 className="text-xl font-semibold">Shivam Yadav</h4>
+          <p className="text-gray-400 text-sm">Co-Founder & COO , SphereX Community</p>
+          <div className="flex space-x-6 mt-2">
+            <a
+              href="mailto:connect.to.shivamyadav@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+            >
+              <Mail size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shivam-yadav2005"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+            >
+              <Linkedin size={28} />
+            </a>
+          </div>
         </div>
       </div>
 
