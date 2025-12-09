@@ -37,6 +37,32 @@ export default function Contact() {
           >
             <Mail size={22} />
             <span>spherexcommunity@gmail.com</span>
+
+             {/* Social Links */}
+                    <div className="flex items-center justify-center gap-8">
+                      {/* LinkedIn */}
+                      <a
+                        href="https://www.linkedin.com/company/spherexcommunity/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 text-indigo-400 hover:text-indigo-500 transition-colors"
+                      >
+                        <Linkedin size={22} />
+                        <span className="hidden sm:inline">LinkedIn</span>
+                      </a>
+            
+                      {/* Instagram */}
+                      <a
+                        href="https://www.instagram.com/spherexcommunity"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 text-pink-400 hover:text-pink-500 transition-colors"
+                      >
+                        <Instagram size={22} />
+                        <span className="hidden sm:inline">Instagram</span>
+                      </a>
+                    </div>
+                    
           </a>
         </div>
 
