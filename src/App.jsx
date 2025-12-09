@@ -5,6 +5,7 @@ import About from "./components/About";
 import Features from "./components/Features";
 import Footer from "./components/ Footer";
 import Contact from "./components/Contact";
+import Founders from "./components/Founders";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
+      <Founders />
       <Features />
       <Contact />
       <Footer />
