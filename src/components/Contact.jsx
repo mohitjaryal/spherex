@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -18,57 +18,21 @@ export default function Contact() {
         Get In Touch
       </h3>
       <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
-        Have questions, suggestions, or want to collaborate? Connect with our team:
+        Have questions, suggestions, or want to collaborate? Connect with us at:
       </p>
 
-      {/* Contact Cards */}
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-        {/* Founder */}
-        <div className="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
-          <h4 className="text-xl font-semibold">Mohit Jaryal</h4>
-          <p className="text-gray-400 text-sm">Founder & CEO, SphereX Community</p>
-          <div className="flex space-x-6 mt-2">
-            <a
-              href="mailto:reach.mohitjaryal@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
-            >
-              <Mail size={28} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mohitjaryal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
-            >
-              <Linkedin size={28} />
-            </a>
-          </div>
-        </div>
-
-        {/* Co-Founder */}
-        <div className="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
-          <h4 className="text-xl font-semibold">Shivam Yadav</h4>
-          <p className="text-gray-400 text-sm">Co-Founder & COO , SphereX Community</p>
-          <div className="flex space-x-6 mt-2">
-            <a
-              href="mailto:connect.to.shivamyadav@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
-            >
-              <Mail size={28} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/shivam-yadav2005"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
-            >
-              <Linkedin size={28} />
-            </a>
-          </div>
+      {/* Contact Card */}
+      <div className="max-w-md mx-auto bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
+        <h4 className="text-xl font-semibold text-indigo-400">SphereX Community</h4>
+        <p className="text-gray-400 text-sm">Let’s build, collaborate, and grow together 🚀</p>
+        <div className="flex items-center justify-center mt-2 gap-2">
+          <Mail size={26} className="text-indigo-400" />
+          <a
+            href="mailto:spherexcommunity@gmail.com"
+            className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"
+          >
+            spherexcommunity@gmail.com
+          </a>
         </div>
       </div>
 
