@@ -5,88 +5,93 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative px-6 md:px-16 py-20 bg-gray-950 text-white overflow-hidden"
+      className="relative px-6 md:px-16 py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white overflow-hidden"
     >
       {/* Floating Background Circles */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-indigo-500/10 rounded-full animate-float-smooth"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-52 h-52 bg-purple-500/10 rounded-full animate-float-smooth delay-2000"></div>
+        <div className="absolute top-1/3 left-1/4 w-48 h-48 bg-indigo-500/10 rounded-full animate-float-smooth"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-56 h-56 bg-purple-500/10 rounded-full animate-float-smooth delay-2000"></div>
       </div>
 
       {/* Section Header */}
-      <h3 className="text-4xl font-extrabold text-center mb-4 text-indigo-400">
+      <h3 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-indigo-400">
         Get In Touch
       </h3>
-      <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
-        Have questions, suggestions, or want to collaborate?  
-        We’d love to connect with you! Reach out to us or our team members below. 🚀
+      <p className="text-gray-300 text-center max-w-2xl mx-auto mb-14 leading-relaxed">
+        Have questions, suggestions, or want to collaborate with us?  
+        We’d love to hear from you. Connect through our community email or directly with our core team for partnerships. 🚀
       </p>
 
       {/* Contact Cards */}
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
         {/* General Contact */}
-        <div className="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
-          <h4 className="text-xl font-semibold text-indigo-400">SphereX Community</h4>
-          <p className="text-gray-400 text-sm">
-            For general inquiries, collaborations, or partnership opportunities — feel free to reach out via email.
+        <div className="bg-gray-900/80 backdrop-blur-md rounded-2xl p-10 shadow-lg hover:shadow-indigo-500/10 transition-shadow duration-300 flex flex-col items-center text-center space-y-5 border border-gray-800">
+          <h4 className="text-2xl font-semibold text-indigo-400">SphereX Community</h4>
+          <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            For general inquiries, event details, or student collaborations,  
+            feel free to reach out to our official email.
           </p>
-          <div className="flex items-center justify-center mt-2 gap-2">
-            <Mail size={26} className="text-indigo-400" />
-            <a
-              href="mailto:spherexcommunity@gmail.com"
-              className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"
-            >
-              spherexcommunity@gmail.com
-            </a>
-          </div>
+          <a
+            href="mailto:spherexcommunity@gmail.com"
+            className="flex items-center gap-2 bg-indigo-500/10 px-5 py-2 rounded-full hover:bg-indigo-500/20 text-indigo-300 transition-colors duration-300"
+          >
+            <Mail size={22} />
+            <span>spherexcommunity@gmail.com</span>
+          </a>
         </div>
 
-        {/* Founder Details */}
-        <div className="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center space-y-4">
-          <h4 className="text-xl font-semibold text-indigo-400">Our Core Team</h4>
-          <div className="space-y-3">
-            {/* Founder */}
-            <div>
-              <p className="font-semibold text-gray-200">Mohit Jaryal</p>
-              <p className="text-sm text-gray-400">Founder & CEO (Community Initiative)</p>
-              <div className="flex items-center justify-center gap-4 mt-1">
-                <a
-                  href="mailto:reach.mohitjaryal@gmail.com"
-                  className="text-indigo-400 hover:text-indigo-300 transition-colors"
-                >
-                  <Mail size={22} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mohitjaryal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-400 hover:text-indigo-300 transition-colors"
-                >
-                  <Linkedin size={22} />
-                </a>
-              </div>
-            </div>
+        {/* Founder & Co-Founder */}
+        <div className="bg-gray-900/80 backdrop-blur-md rounded-2xl p-10 shadow-lg hover:shadow-indigo-500/10 transition-shadow duration-300 flex flex-col items-center text-center space-y-6 border border-gray-800">
+          <h4 className="text-2xl font-semibold text-indigo-400">Partnerships & Collaborations</h4>
+          <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+            For brand partnerships, sponsorships, or major collaborations,  
+            you can directly connect with our core team members below.
+          </p>
 
-            {/* Co-Founder */}
-            <div>
-              <p className="font-semibold text-gray-200">Shivam Yadav</p>
-              <p className="text-sm text-gray-400">Co-Founder & COO</p>
-              <div className="flex items-center justify-center gap-4 mt-1">
-                <a
-                  href="mailto:connect.to.shivamyadav@gmail.com"
-                  className="text-indigo-400 hover:text-indigo-300 transition-colors"
-                >
-                  <Mail size={22} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/shivam-yadav2005"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-400 hover:text-indigo-300 transition-colors"
-                >
-                  <Linkedin size={22} />
-                </a>
-              </div>
+          {/* Founder */}
+          <div className="space-y-1">
+            <p className="font-semibold text-gray-200">Mohit Jaryal</p>
+            <p className="text-sm text-gray-400">Founder & CEO</p>
+            <div className="flex items-center justify-center gap-4 mt-1">
+              <a
+                href="mailto:reach.mohitjaryal@gmail.com"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                <Mail size={22} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mohitjaryal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                <Linkedin size={22} />
+              </a>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="h-[1px] w-20 bg-gray-700 mx-auto my-2"></div>
+
+          {/* Co-Founder */}
+          <div className="space-y-1">
+            <p className="font-semibold text-gray-200">Shivam Yadav</p>
+            <p className="text-sm text-gray-400">Co-Founder & COO</p>
+            <div className="flex items-center justify-center gap-4 mt-1">
+              <a
+                href="mailto:connect.to.shivamyadav@gmail.com"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                <Mail size={22} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shivam-yadav2005"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                <Linkedin size={22} />
+              </a>
             </div>
           </div>
         </div>
