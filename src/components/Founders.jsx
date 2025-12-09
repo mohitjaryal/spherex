@@ -19,8 +19,14 @@ export default function Founders() {
   return (
     <section
       id="founders"
-      className="px-6 md:px-16 py-20 bg-gray-950 text-center text-white"
+      className="px-6 md:px-16 py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-center text-white relative overflow-hidden"
     >
+      {/* Floating Background Circles */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-indigo-500/10 rounded-full animate-float-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-56 h-56 bg-purple-500/10 rounded-full animate-float-slow delay-2000"></div>
+      </div>
+
       <h3 className="text-4xl font-extrabold mb-10 text-indigo-400">
         Meet the Founders
       </h3>
@@ -28,7 +34,7 @@ export default function Founders() {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Founder */}
         <div
-          className={`bg-gray-900 rounded-2xl shadow-xl p-6 w-72 transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-600/50 ${
+          className={`bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-72 transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-600/50 border border-gray-800 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -67,7 +73,7 @@ export default function Founders() {
 
         {/* Co-Founder */}
         <div
-          className={`bg-gray-900 rounded-2xl shadow-xl p-6 w-72 transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-600/50 ${
+          className={`bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-xl p-6 w-72 transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-600/50 border border-gray-800 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -96,6 +102,20 @@ export default function Founders() {
           </div>
         </div>
       </div>
+
+      {/* Smooth Floating Animations */}
+      <style>
+        {`
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); opacity: 0.4; }
+            50% { transform: translateY(-15px); opacity: 0.7; }
+          }
+          .animate-float-slow {
+            animation: float-slow 20s ease-in-out infinite;
+          }
+          .delay-2000 { animation-delay: 2s; }
+        `}
+      </style>
     </section>
   );
 }
