@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Instagram } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -25,45 +25,46 @@ export default function Contact() {
       {/* Contact Cards */}
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
         {/* General Contact */}
-        <div className="bg-gray-900/80 backdrop-blur-md rounded-2xl p-10 shadow-lg hover:shadow-indigo-500/10 transition-shadow duration-300 flex flex-col items-center text-center space-y-5 border border-gray-800">
+        <div className="bg-gray-900/80 backdrop-blur-md rounded-2xl p-10 shadow-lg hover:shadow-indigo-500/10 transition-shadow duration-300 flex flex-col items-center text-center space-y-6 border border-gray-800">
           <h4 className="text-2xl font-semibold text-indigo-400">SphereX Community</h4>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
             For general inquiries, event details, or student collaborations,  
-            feel free to reach out to our official email.
+            feel free to reach out to our official email or social handles.
           </p>
+
+          {/* Email */}
           <a
             href="mailto:spherexcommunity@gmail.com"
             className="flex items-center gap-2 bg-indigo-500/10 px-5 py-2 rounded-full hover:bg-indigo-500/20 text-indigo-300 transition-colors duration-300"
           >
             <Mail size={22} />
             <span>spherexcommunity@gmail.com</span>
-
-             {/* Social Links */}
-                    <div className="flex items-center justify-center gap-8">
-                      {/* LinkedIn */}
-                      <a
-                        href="https://www.linkedin.com/company/spherexcommunity/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 text-indigo-400 hover:text-indigo-500 transition-colors"
-                      >
-                        <Linkedin size={22} />
-                        <span className="hidden sm:inline">LinkedIn</span>
-                      </a>
-            
-                      {/* Instagram */}
-                      <a
-                        href="https://www.instagram.com/spherexcommunity"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 text-pink-400 hover:text-pink-500 transition-colors"
-                      >
-                        <Instagram size={22} />
-                        <span className="hidden sm:inline">Instagram</span>
-                      </a>
-                    </div>
-                    
           </a>
+
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-8 pt-3">
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/spherexcommunity/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 text-indigo-400 hover:text-indigo-500 transition-colors"
+            >
+              <Linkedin size={22} />
+              <span className="hidden sm:inline">LinkedIn</span>
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/spherexcommunity"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 text-pink-400 hover:text-pink-500 transition-colors"
+            >
+              <Instagram size={22} />
+              <span className="hidden sm:inline">Instagram</span>
+            </a>
+          </div>
         </div>
 
         {/* Founder & Co-Founder */}
