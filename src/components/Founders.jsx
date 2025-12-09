@@ -48,7 +48,7 @@ export default function Founders() {
           </h5>
           <p className="text-indigo-300 text-sm mb-3">Founder & CEO</p>
           <p className="text-gray-400 text-sm mb-4">
-            Innovating and inspiring through technology to empower the next generation of changemakers.
+            Innovating and inspiring to empower the next generation of changemakers and create meaningful global impact.
           </p>
           <div className="flex justify-center space-x-4 mt-2">
             <a
