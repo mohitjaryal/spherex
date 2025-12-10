@@ -63,7 +63,7 @@ export default function Hero() {
             shape our tech narratives.
           </p>
           <a
-            href="https://forms.gle/SYwzRJHJ46V5p1Xd6"
+            href="https://forms.gle/NRUriGnAvZK3eXVVA"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-purple-500/40 transition-all duration-300"
