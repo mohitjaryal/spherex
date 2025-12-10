@@ -1,5 +1,5 @@
 import React from "react";
-import hiring1 from "../images/hiring1.png"; 
+import hiring1 from "../images/hiring1.jpeg"; // ✅ your local image
 
 export default function Hero() {
   return (
@@ -40,32 +40,37 @@ export default function Hero() {
       </div>
 
       {/* Hiring Section */}
-      <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex-1 max-w-md bg-gray-900/40 backdrop-blur-md border border-indigo-500/30 rounded-2xl p-8 shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
-        {/* ✅ Imported local image */}
-        <img
-          src={hiring1}
-          alt="We are Hiring"
-          className="rounded-xl mb-6 object-cover w-full h-56"
-        />
-        <h3 className="text-2xl font-bold text-white mb-3">
-          🚀 We’re Hiring!
-        </h3>
-        <p className="text-gray-300 mb-6">
-          SphereX Community is looking for a{" "}
-          <span className="text-indigo-400 font-semibold">
-            Research & Content Head
-          </span>{" "}
-          to lead creative storytelling, manage research initiatives, and shape
-          our tech narratives.
-        </p>
-        <a
-          href="https://forms.gle/SYwzRJHJ46V5p1Xd6"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-purple-500/40 transition-all duration-300"
-        >
-          Apply Now
-        </a>
+      <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex-1 max-w-md bg-gray-900/40 backdrop-blur-xl border border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl hover:shadow-indigo-500/30 transition-all duration-500 transform hover:scale-[1.02]">
+        {/* ✅ Full visible image (no cropping) */}
+        <div className="w-full">
+          <img
+            src={hiring1}
+            alt="We are Hiring"
+            className="w-full h-auto rounded-t-3xl object-contain transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+
+        <div className="p-8">
+          <h3 className="text-2xl font-bold text-white mb-3">
+            🚀 We’re Hiring!
+          </h3>
+          <p className="text-gray-300 mb-6 leading-relaxed">
+            SphereX Community is looking for a{" "}
+            <span className="text-indigo-400 font-semibold">
+              Research & Content Head
+            </span>{" "}
+            to lead creative storytelling, manage research initiatives, and
+            shape our tech narratives.
+          </p>
+          <a
+            href="https://forms.gle/SYwzRJHJ46V5p1Xd6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-purple-500/40 transition-all duration-300"
+          >
+            Apply Now
+          </a>
+        </div>
       </div>
 
       {/* Tailwind Custom Animations */}
