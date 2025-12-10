@@ -30,7 +30,7 @@ export default function Hero() {
           Join us in shaping the future of technology.
         </p>
         <a
-          href="https://forms.gle/uc6Khwq9Xv4wUSDv7"
+          href="https://forms.gle/CLuAFwMQ56pZwaGJ6"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-indigo-500/40 transition-all duration-300"
