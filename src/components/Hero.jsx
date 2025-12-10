@@ -1,5 +1,5 @@
 import React from "react";
-import hiring1 from "../images/hiring1.png"; // ✅ correct relative import
+import hiring1 from "../images/hiring1.png"; 
 
 export default function Hero() {
   return (
