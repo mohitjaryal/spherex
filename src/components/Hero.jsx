@@ -16,6 +16,15 @@ export default function Hero() {
         <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-indigo-400/10 rounded-full animate-float-smooth delay-1500"></div>
       </div>
 
+      {/* 🔹 Big Background Logo */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-10 scale-125">
+        <img
+          src={SphereXcommunity}
+          alt="Spherex Logo Background"
+          className="w-[500px] md:w-[650px] lg:w-[800px] object-contain animate-pulse-slow"
+        />
+      </div>
+
       {/* Hero Content */}
       <div className="relative z-10 max-w-3xl flex-1">
         <h2 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
@@ -40,22 +49,18 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Logo Card */}
-      <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex items-center justify-between flex-1 max-w-md bg-gray-900/40 backdrop-blur-xl border border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl hover:shadow-indigo-500/30 transition-all duration-500 transform hover:scale-[1.02] p-6">
-        <div className="flex-1">
-          <h2 className="text-2xl font-semibold text-white">Welcome to Spherex Community</h2>
-          <p className="text-gray-300 mt-2">Connecting creators, fans & innovators across the globe.</p>
-        </div>
+      {/* Logo Card (small right side) */}
+   <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex items-center justify-center flex-1 max-w-md h-64 bg-gradient-to-br from-gray-900/60 via-gray-800/40 to-indigo-950/30 backdrop-blur-xl border border-indigo-500/40 rounded-3xl shadow-2xl hover:shadow-indigo-500/40 transition-all duration-700 transform hover:scale-[1.05] hover:rotate-1">
+  <img
+    src={SphereXcommunity}
+    alt="Spherex Logo"
+    className="w-32 h-32 object-contain rounded-2xl transition-transform duration-700 hover:scale-110 drop-shadow-[0_0_15px_rgba(99,102,241,0.6)]"
+  />
 
-        {/* Right side logo */}
-        <div className="ml-4 flex-shrink-0">
-          <img
-            src={SphereXcommunity}
-            alt="Spherex Logo"
-            className="w-16 h-16 object-contain rounded-xl transition-transform duration-500 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.6)]"
-          />
-        </div>
-      </div>
+  {/* Glow aura behind logo */}
+  <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-indigo-500/10 via-purple-500/10 to-transparent blur-3xl opacity-70"></div>
+</div>
+
 
       {/* Tailwind Custom Animations */}
       <style>{`
@@ -75,12 +80,14 @@ export default function Hero() {
           100% { transform: translate(0,0) rotate(0deg) scale(1); opacity: 0.4; }
         }
 
-        .animate-float-smooth {
-          animation: float-smooth 20s ease-in-out infinite;
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.1; transform: scale(1); }
+          50% { opacity: 0.2; transform: scale(1.03); }
         }
-        .animate-float-smooth-reverse {
-          animation: float-smooth-reverse 25s ease-in-out infinite;
-        }
+
+        .animate-float-smooth { animation: float-smooth 20s ease-in-out infinite; }
+        .animate-float-smooth-reverse { animation: float-smooth-reverse 25s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 10s ease-in-out infinite; }
         .delay-1000 { animation-delay: 1s; }
         .delay-1500 { animation-delay: 1.5s; }
         .delay-2000 { animation-delay: 2s; }
