@@ -1,5 +1,6 @@
 import React from "react";
-import hiring1 from "../images/hiring1.jpeg"; // ✅ your local image
+import hiring1 from "../images/hiring1.jpeg"; 
+import SphereXcommunity from "../images/SphereXcommunity.jpeg"; // ✅ Correct logo import
 
 export default function Hero() {
   return (
@@ -39,39 +40,22 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Hiring Section */}
-      {/* <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex-1 max-w-md bg-gray-900/40 backdrop-blur-xl border border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl hover:shadow-indigo-500/30 transition-all duration-500 transform hover:scale-[1.02]">
+      {/* Logo Card */}
+      <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex items-center justify-between flex-1 max-w-md bg-gray-900/40 backdrop-blur-xl border border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl hover:shadow-indigo-500/30 transition-all duration-500 transform hover:scale-[1.02] p-6">
+        <div className="flex-1">
+          <h2 className="text-2xl font-semibold text-white">Welcome to Spherex Community</h2>
+          <p className="text-gray-300 mt-2">Connecting creators, fans & innovators across the globe.</p>
+        </div>
 
-        <div className="w-full">
+        {/* Right side logo */}
+        <div className="ml-4 flex-shrink-0">
           <img
-            src={hiring1}
-            alt="We are Hiring"
-            className="w-full h-auto rounded-t-3xl object-contain transition-transform duration-500 hover:scale-105"
+            src={SphereXcommunity}
+            alt="Spherex Logo"
+            className="w-16 h-16 object-contain rounded-xl transition-transform duration-500 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.6)]"
           />
         </div>
-
-        <div className="p-8">
-          <h3 className="text-2xl font-bold text-white mb-3">
-            🚀 We’re Hiring!
-          </h3>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            SphereX Community is looking for a{" "}
-            <span className="text-indigo-400 font-semibold">
-              Research & Content Head
-            </span>{" "}
-            to lead creative storytelling, manage research initiatives, and
-            shape our tech narratives.
-          </p>
-          <a
-            href="https://forms.gle/NRUriGnAvZK3eXVVA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-purple-500/40 transition-all duration-300"
-          >
-            Apply Now
-          </a>
-        </div>
-      </div> */}
+      </div>
 
       {/* Tailwind Custom Animations */}
       <style>{`
@@ -82,6 +66,7 @@ export default function Hero() {
           75% { transform: translate(-10px,-15px) rotate(-15deg) scale(0.95); opacity: 0.6; }
           100% { transform: translate(0,0) rotate(0deg) scale(1); opacity: 0.4; }
         }
+
         @keyframes float-smooth-reverse {
           0% { transform: translate(0,0) rotate(0deg) scale(1); opacity: 0.4; }
           25% { transform: translate(-10px,15px) rotate(-15deg) scale(1.05); opacity: 0.6; }
