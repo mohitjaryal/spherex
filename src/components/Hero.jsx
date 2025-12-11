@@ -40,8 +40,8 @@ export default function Hero() {
       </div>
 
       {/* Hiring Section */}
-      <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex-1 max-w-md bg-gray-900/40 backdrop-blur-xl border border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl hover:shadow-indigo-500/30 transition-all duration-500 transform hover:scale-[1.02]">
-        {/* ✅ Full visible image (no cropping) */}
+      {/* <div className="relative z-10 mt-16 lg:mt-0 lg:ml-12 flex-1 max-w-md bg-gray-900/40 backdrop-blur-xl border border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl hover:shadow-indigo-500/30 transition-all duration-500 transform hover:scale-[1.02]">
+
         <div className="w-full">
           <img
             src={hiring1}
@@ -71,7 +71,7 @@ export default function Hero() {
             Apply Now
           </a>
         </div>
-      </div>
+      </div> */}
 
       {/* Tailwind Custom Animations */}
       <style>{`
